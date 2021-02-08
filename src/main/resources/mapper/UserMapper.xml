@@ -20,7 +20,7 @@
         select
             <include refid="Base_Column_List" />
         from
-            user
+            user_xmj
         where id = ${id}
     </select>
 

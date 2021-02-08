@@ -20,6 +20,7 @@ public class UserController {
     @RequestMapping("getUser/{id}")
     public User getUser(@PathVariable int id){
         return userService.getUser(id);
+
     }
 
     @PostMapping("/createUser")
