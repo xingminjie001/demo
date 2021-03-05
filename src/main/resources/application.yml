@@ -1,6 +1,6 @@
 spring:
   datasource:
-    driver-class-name: com.mysql.jdbc.Driver
+    driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://192.168.32.14:3306/RezenTest?useUnicode=true&characterEncoding=utf8&serverTimezone=GMT%2B8
     username: lc
     password: lc@123456
