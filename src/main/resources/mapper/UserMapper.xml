@@ -23,5 +23,23 @@
             user_xmj
         where id = ${id}
     </select>
+    <select id="getUserByName" resultMap="BaseResultMap" parameterType="String" >
+        select
+            <include refid="Base_Column_List" />
+        from
+            user_xmj
+        where name = #{name} LIMIT 1
+    </select>
+    <sql id="insertUser">
+        (name, age, password,create_time,update_time)
+    </sql>
+    <insert id="insertUser" parameterType="com.example.demo.domain.User" >
+        insert into user_xmj
+        <include refid="insertUser"/>
+        values (#{name},#{age},#{password},#{createTime},#{updateTime})
+    </insert>
+
+
+
 
 </mapper>

@@ -9,9 +9,9 @@ import org.springframework.stereotype.Service;
 import java.time.LocalDateTime;
 
 /**
- * @author yanzhongliu
- * @email yanzhongliu@ctrip.com
- * @date 2020/6/23 15:33
+ * @author xingminjie
+ * @email xingminjie@trip.com
+ * @date 2021/03/16 15:00
  */
 @Service
 public class UserServiceImpl implements UserService {
@@ -24,9 +24,17 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    public User getUserByName(String name){
+
+        return userMapper.getUserByName(name);
+    }
+    @Override
     public Integer insertUser(User user){
         user.setCreateTime(LocalDateTime.now());
         user.setUpdateTime(LocalDateTime.now());
-        return userMapper.insert(user);
+        System.out.println(user);
+        System.out.println("-----------------");
+        System.out.println(userMapper);
+        return userMapper.insertUser(user);
     }
 }

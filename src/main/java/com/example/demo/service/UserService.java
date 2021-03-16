@@ -9,8 +9,7 @@ import com.example.demo.domain.User;
  */
 
 public interface UserService {
-
     User getUser(int id);
-
-    Integer insertUser(User user);
+    User getUserByName(String name);
+    Integer insertUser(User newuser);
 }

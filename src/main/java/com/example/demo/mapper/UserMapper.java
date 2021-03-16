@@ -14,5 +14,6 @@ import com.example.demo.config.CustomBaseMapper;
 public interface UserMapper extends CustomBaseMapper<User> {
 
     User getUser(int id);
-
+    User getUserByName(String name);
+    Integer insertUser(User newuser);
 }
